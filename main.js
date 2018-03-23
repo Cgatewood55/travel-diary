@@ -1,0 +1,32 @@
+const destinations = [
+    {
+        image:"",
+        title:"",
+        description:""
+    },
+    {
+        image:"",
+        title:"",
+        description:""
+    },
+    {
+        image:"",
+        title:"",
+        description:""
+    },
+    {
+        image:"",
+        title:"",
+        description:""
+    },
+    {
+        image:"",
+        title:"",
+        description:""
+    },
+    {
+        image:"",
+        title:"",
+        description:""
+    },
+]
