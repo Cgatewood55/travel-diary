@@ -32,23 +32,25 @@ const destinations = [
         description: "dubai"
     },
 ];
-function printToDom(cards,id ){
-    document.getElementById(id).innerHTML = cards;
+const printToDom = (placeString, divId)=> {
+    const printTo = document.getElementById(divId);
+    printTo.innerHTML = placeString;
+
 };
 
-function destinationDomString(array){
-    // let placeDetail = array[i];
-    let placeString = "";
-    for(let i=0; i<array.length; i++){
-        // let placeDetail = array[i];
-        placeString += "<div class ='cards'>";
-        placeString += "<img src='" + array[i].image + "'/>";
-        placeString += "<h3>" + array[i].title + "</h3>";
-        placeString += "<p>" + array[i].description + "</p>";
-        placeString += "</div>"
-        
-    }
-    printToDom(placeString, 'cards');
-};
-destinationDomString(destinations);
+
+const buildDomString = (destinationArray) => {
+    let placeString = '';
+    destinationArray.forEach((destinations) => {
+        placeString += `<div class="cards">`;
+        placeString += `<img src="${destinations.image}">`;
+        placeString += `<h3>${destinations.title}</h3>`;
+        placeString += `<p>${destinations.description}</p>`;
+        placeString += `<button class="card-button">Detail</button>`;
+        placeString +=`</div>`;
+    })
+    printToDom(placeString,'cards');
+}
+buildDomString(destinations);
+
 
